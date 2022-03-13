@@ -1,0 +1,15 @@
+.site-header {
+  background-color: yellow;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid green;
+}
+
+.search-box {
+  width: 90%;
+  height: 30px;
+}
