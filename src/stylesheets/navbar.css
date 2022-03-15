@@ -6,6 +6,7 @@
 .show-nav {
   position: fixed;
   left: -100%;
+  top: 0;
   transition: 850ms;
   background: linear-gradient(110deg, #0173cc 60%, #ffed4b 60%);
   height: 100vh;
