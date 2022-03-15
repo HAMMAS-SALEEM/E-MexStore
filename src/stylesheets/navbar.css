@@ -3,20 +3,17 @@
   flex-direction: column;
 }
 
-.hide-nav {
+.show-nav {
   position: fixed;
   left: -100%;
   transition: 850ms;
-}
-
-.show-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
   background: linear-gradient(110deg, #0173cc 60%, #ffed4b 60%);
   height: 100vh;
   width: 100%;
-  transition: 850ms;
+}
+
+.show-nav.active {
+  left: 0;
 }
 
 .nav-btn {

@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <header className="site-header">
       <button type="button" onClick={handleVisible} className="nav-btn"><img className="burger-icon" src={burger} alt="menu button" /></button>
-      <div className={visible ? 'show-nav' : 'hide-nav'}>
+      <div className={visible ? 'show-nav active' : 'show-nav'}>
         <div className="nav-contents">
           <button type="button" onClick={handleVisible} className="nav-btn"><img src={close} alt="close btn" className="closeBtn" /></button>
           <img src={logo} alt="logo icon" id="nav-logo" className="company-logo" />
