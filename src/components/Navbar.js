@@ -4,6 +4,7 @@ import logo from '../assets/images/icons/logo.svg';
 import '../stylesheets/navbar.css';
 import burger from '../assets/images/icons/burger.svg';
 import close from '../assets/images/icons/close.svg';
+import search from '../assets/images/icons/search.svg';
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
@@ -15,22 +16,27 @@ const Navbar = () => {
   const handleVisible = () => setVisible(!visible);
   return (
     <header className="site-header">
+      <div className="logo-details">
+        <img src={logo} alt="logo icon" id="nav-logo" className="company-logo" />
+        <span className="site-name">México Tienda</span>
+      </div>
       <button type="button" onClick={handleVisible} className="nav-btn"><img className="burger-icon" src={burger} alt="menu button" /></button>
       <div className={visible ? 'show-nav active' : 'show-nav'}>
         <div className="nav-contents">
           <button type="button" onClick={handleVisible} className="nav-btn"><img src={close} alt="close btn" className="closeBtn" /></button>
-          <img src={logo} alt="logo icon" id="nav-logo" className="company-logo" />
-          <span className="site-name">México Tienda</span>
-          <input type="text" placeholder="Search..." className="search-box" />
         </div>
         <nav className="nav-container">
           {
                 navLinks.map((link) => (
-                  <NavLink key={link.id} to={link.to}>{link.name}</NavLink>
+                  <NavLink key={link.id} onClick={handleVisible} className={(isActive) => (isActive ? 'link active' : 'link')} to={link.to}>{link.name}</NavLink>
                 ))
             }
         </nav>
       </div>
+      <form id="form" className="form">
+        <input type="text" placeholder="Search..." className="search-box" />
+        <button type="submit" className="search-icon-btn"><img src={search} alt="search icon" className="seach-icon" /></button>
+      </form>
     </header>
   );
 };
