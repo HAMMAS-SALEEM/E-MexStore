@@ -27,8 +27,8 @@ const Navbar = () => {
         </div>
         <nav className="nav-container">
           {
-                navLinks.map((link) => (
-                  <NavLink key={link.id} onClick={handleVisible} className={(isActive) => (isActive ? 'link active' : 'link')} to={link.to}>{link.name}</NavLink>
+                navLinks.map((link, index) => (
+                  <NavLink key={link.id} id={index === 0 ? 'first-link' : ''} onClick={handleVisible} className={(isActive) => (isActive ? 'link active' : 'link')} to={link.to}>{link.name}</NavLink>
                 ))
             }
         </nav>

@@ -107,3 +107,44 @@
   margin-left: 20px;
   margin-top: 20px;
 }
+
+@media screen and (min-width: 768px) {
+  .site-header {
+    background: #fff159;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .show-nav {
+    position: static;
+    height: auto;
+    background: none;
+    order: 2;
+  }
+
+  .nav-container {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .link {
+    color: rgb(150, 149, 149);
+    font-size: 16px;
+    margin-top: 0;
+    font-weight: 500;
+  }
+
+  .link:hover {
+    color: black;
+  }
+
+  #first-link {
+    margin-left: 4px;
+  }
+
+  .form {
+    grid-column: 2/3;
+  }
+}
