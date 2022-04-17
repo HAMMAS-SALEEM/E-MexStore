@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --heights: 50vh;
   --widths: 100%;
 }
@@ -11,18 +11,26 @@
   overflow: hidden;
 }
 
-.active {
-  display: inline-block;
-}
-
-.inactive {
-  display: none;
-}
-
 .slides {
+  opacity: 0;
+  inset: 0;
   height: var(--heights);
   width: var(--widths);
   position: relative;
+  transition: 200ms opacity ease-in;
+  transition-delay: 200ms;
+}
+
+
+.slides.active {
+    display: inline-block;
+    opacity: 1;
+    transition-delay: 0ms;
+    z-index: 1;
+}
+
+.inactive {
+    opacity: 0;
 }
 
 .slide-image {
@@ -81,4 +89,45 @@
 .active-dot,
 .dot:hover {
   background-color: rgba(255, 255, 255, 0.5);
+} */
+
+.carousel__track-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.carousel__track {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel__slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* z-index: 1; */
+}
+
+.carousel__button--left {
+  left: 15px;
+  z-index: 1;
+}
+
+.carousel__button--right {
+  right: 15px;
 }
