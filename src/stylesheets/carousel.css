@@ -101,13 +101,13 @@
 .carousel__track {
   width: 100%;
   height: 100%;
+  transition: transform 350ms ease-in-out;
 }
 
 .carousel__slide {
   width: 100%;
   height: 100%;
   position: absolute;
-  transition-timing-function: ease-in-out;
 }
 
 .current__slide {
